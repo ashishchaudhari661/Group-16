@@ -20,14 +20,14 @@ public class SampleReport {
 	WebDriver driver;
 @BeforeTest
 	public void data() {
-	ExtentSparkReporter spark = new ExtentSparkReporter("ourreport.html");
-	extent= new ExtentReports();
-	extent.attachReporter(spark);
-	extent.setSystemInfo("Testing","regretion");
+	ExtentSparkReporter spark = new ExtentSparkReporter("ourreport.html");	//it  create the reports
+	extent= new ExtentReports();					//it read alll the data 
+	extent.attachReporter(spark);					//attach collect data from extent to spark
+	extent.setSystemInfo("Testing","regretion");		//put report information 
 	}
 @Test
 	public void test1() {
-	test=extent.createTest("test1");
+	test=extent.createTest("test1");		// create the test and return the extent test
 	System.out.println("test");
 	}
 @Test(timeOut=1000)

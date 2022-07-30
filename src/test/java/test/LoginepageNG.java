@@ -91,4 +91,8 @@ public void zerodhalogin() throws EncryptedDocumentException, IOException, Inter
 	public void garbage() {
 		extent.flush();
 	}
+	@Test 
+	public void ashish() {
+		System.out.println("hello");
+	}
 }
